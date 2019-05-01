@@ -1,0 +1,30 @@
+task1
+Arrays.stream(names).filter(x -> x.toLowerCase().startsWith("c")).collect(Collectors.toList());
+
+
+task2
+Arrays.stream(names).max(Comparator.comparingInt(String::length)).orElse(null);
+
+
+task3
+Arrays.stream(names).filter(x -> x.length() % 2 == 0).collect(Collectors.toList());
+
+
+task4
+Arrays.stream(names).map(x -> new StringBuilder(x).reverse().toString()).collect(Collectors.toList());
+
+
+task5
+Arrays.stream(names).mapToInt(String::length).sum();
+
+
+task6
+Arrays.stream(names).mapToInt(String::length).average().getAsDouble();
+
+
+task7
+numbers.stream().map(x -> (x % 2 == 0 ? "e" : "o") + x).collect(Collectors.joining(","));
+
+
+task8
+numbers.stream().map(x -> "+" + x + "+").collect(Collectors.toList());
