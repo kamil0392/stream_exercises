@@ -1,11 +1,14 @@
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.List;
+import java.util.*;
 
 @Slf4j
-public class Excercise1 {
+public class Exercise1 {
 
     public static void main(String[] args) {
+        List<String> list = Arrays.asList("abc","abc","bcd");
+        Set<String> set = new HashSet<>(list);
+        System.out.println(set);
     }
 
     /**
@@ -25,7 +28,7 @@ public class Excercise1 {
      * @return
      */
     public String task2(String[] names) {
-        return null;
+        return Arrays.stream(names).max(Comparator.comparingInt(String::length)).get();
     }
 
     /**
